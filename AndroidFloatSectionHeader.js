@@ -1,15 +1,16 @@
 import React, {
-    PropTypes,
     Component,
 } from 'react'
 import {
     View,
+    ViewPropTypes,
 } from 'react-native'
+import PropTypes from 'prop-types'
 
 export default class AndroidFloatSectionHeader extends Component {
 
     static propTypes = {
-        ...View.propTypes,
+        ...ViewPropTypes,
         floatSectionHeaderWidth: PropTypes.number.isRequired,
         renderChildren: PropTypes.func.isRequired,
     }

@@ -6,11 +6,11 @@
  */
 
 import React, {
-    PropTypes,
     Component,
 } from 'react'
 import {
     View,
+    ViewPropTypes,
     ScrollView,
     ListView,
     StyleSheet,
@@ -19,7 +19,7 @@ import {
     Dimensions,
 } from 'react-native'
 
-//import TimerEnhance from '../react-native-smart-timer-enhance'
+import PropTypes from 'prop-types'
 import TimerEnhance from 'react-native-smart-timer-enhance'
 import { withinErrorMargin, } from './utils'
 import constants, {
@@ -96,8 +96,8 @@ class PullToRefreshListView extends Component {
         pageTop: PropTypes.number,
         renderFloatSectionHeader: PropTypes.func,
         floatSectionHeaderWidth: PropTypes.number,
-        listSectionProps: PropTypes.shape(View.propTypes),
-        listItemProps: PropTypes.shape(View.propTypes),
+        listSectionProps: PropTypes.shape(ViewPropTypes),
+        listItemProps: PropTypes.shape(ViewPropTypes),
         renderRowWithVisibility: PropTypes.bool,
         viewType: PropTypes.oneOf([
             viewType.scrollView,

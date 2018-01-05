@@ -6,11 +6,11 @@
  */
 
 import React, {
-    PropTypes,
     Component,
 } from 'react'
 import {
     View,
+    ViewPropTypes,
     ScrollView,
     ListView,
     StyleSheet,
@@ -18,7 +18,7 @@ import {
     Platform,
 } from 'react-native'
 
-//import TimerEnhance from '../react-native-smart-timer-enhance'
+import PropTypes from 'prop-types'
 import TimerEnhance from 'react-native-smart-timer-enhance'
 import { withinErrorMargin, } from './utils'
 import constants, {
@@ -82,7 +82,7 @@ class PullToRefreshListView extends Component {
 
     static propTypes = {
         ...ListView.propTypes,
-        listItemProps: PropTypes.shape(View.propTypes),
+        listItemProps: PropTypes.shape(ViewPropTypes),
         viewType: PropTypes.oneOf([
             viewType.scrollView,
             viewType.listView,

@@ -1,17 +1,17 @@
 
 import React, {
-    PropTypes,
     Component,
 } from 'react'
 import {
     View,
+    ViewPropTypes,
 } from 'react-native'
 
 export default class ListItem extends Component {
 
 
     static propTypes = {
-        ...View.propTypes,
+        ...ViewPropTypes,
     }
 
     constructor(props) {
